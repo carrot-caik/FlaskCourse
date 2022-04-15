@@ -1,4 +1,9 @@
-bin/*
-include/*
-lib/*
-lib64/*
+# File directories:
+bin/**
+include/**
+lib/**
+lib64/**
+__pycache__/**
+
+# Individual files:
+pyvenv.cfg
