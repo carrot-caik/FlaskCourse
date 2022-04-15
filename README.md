@@ -1,6 +1,6 @@
 # Flask Course
 - Based off of following [this video](https://www.youtube.com/watch?v=Qr4QMBUPxWo) uploaded by freeCodeCamp.org.
-- Current position in the video: 1:02:58 (Chapter: 4).
+- Current position in the video: 1:21:14 (Chapter: 5).
 
 ## Virtual Environment Setup
 ```bash
