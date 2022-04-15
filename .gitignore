@@ -1,3 +1,6 @@
+# File extensions:
+*.db
+
 # File directories:
 bin/**
 include/**
