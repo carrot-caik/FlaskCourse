@@ -1,7 +1,6 @@
 # Flask Course
 - Based off of following [this video](https://www.youtube.com/watch?v=Qr4QMBUPxWo) uploaded by freeCodeCamp.org.
-- Current position in the video: 5:54:15 (Chapter: 16).
-
+- [Flask Series source code](https://github.com/jimdevops19/FlaskSeries).
 ## Virtual Environment Setup
 ```bash
 $ python3 -m venv .
