@@ -30,5 +30,5 @@ $ export FLASK_DEBUG=1
 
 ## Run Command
 ```bash 
-$ flask run
+$ python run.py
 ```
