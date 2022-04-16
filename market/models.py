@@ -15,6 +15,7 @@ class User(db.Model, UserMixin):
     budget = db.Column(db.Integer(), nullable=False, default=1000)
     items = db.relationship('Item', backref='owned_user', lazy=True)
 
+    # Formats the displayed budget text so that there are commas in appropriate places
     @property
     def prettier_budget(self):
         if len(str(self.budget)) >= 4:
@@ -30,12 +31,15 @@ class User(db.Model, UserMixin):
     def password(self, plain_text_password):
         self.password_hash = bcrypt.generate_password_hash(plain_text_password).decode('utf-8')
 
+    # Check if the user has entered a correct password when run through bcrypt encryption
     def check_password_correction(self, attempted_password):
         return bcrypt.check_password_hash(self.password_hash, attempted_password)
     
+    #Check if the user can purchase an item
     def can_purchase(self, item_obj):
         return self.budget >= item_obj.price
 
+    # Check if the user owns an item, so that they can sell it
     def can_sell(self, item_obj):
         return item_obj in self.items
     
@@ -49,11 +53,13 @@ class Item(db.Model):
     def __repr__(self):
         return f'Item {self.name}'
 
+    # The process for a user to buy an item
     def buy(self, user):
         self.owner = user.id
         user.budget -= self.price
         db.session.commit()
 
+    # The process for a user to sell an item
     def sell(self, user):
         self.owner = None
         user.budget += self.price

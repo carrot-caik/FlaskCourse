@@ -35,9 +35,7 @@ def market_page():
         
         if s_item_object:
             if current_user.can_sell(s_item_object):
-                print("h1")
                 s_item_object.sell(current_user)
-                print("hi")
                 flash(f'Sold {p_item_object.name}.', category='success')
             else:
                 flash(f'Something went wrong with selling {s_item_object.name}.', category='danger')
@@ -53,6 +51,7 @@ def market_page():
 def register_page():
     form = RegisterForm()
     if form.validate_on_submit():
+        # Create a new user
         user_to_create = User(username=form.username.data,
                               email_address=form.email_address.data,
                               password=form.password1.data)
@@ -73,6 +72,7 @@ def login_page():
     form = LoginForm()
 
     if form.validate_on_submit():
+        # Log in a pre-existing user
         attempted_user = User.query.filter_by(username=form.username.data).first()
         if attempted_user and attempted_user.check_password_correction(
             attempted_password=form.password.data):
