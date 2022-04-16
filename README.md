@@ -1,6 +1,6 @@
 # Flask Course
 - Based off of following [this video](https://www.youtube.com/watch?v=Qr4QMBUPxWo) uploaded by freeCodeCamp.org.
-- Current position in the video: 2:52:00 (Chapter: 9).
+- Current position in the video: 3:13:38 (Chapter: 10).
 
 ## Virtual Environment Setup
 ```bash
@@ -8,7 +8,7 @@ $ python3 -m venv .
 # Get terminal into virtual environment
 $ source ./bin/activate
 # Install virtual environment packages
-$ pip install flask flask-sqlalchemy flask-wtf wtforms
+$ pip install flask flask-sqlalchemy flask-wtf wtforms email_validator
 ```
 
 ## Useful software
