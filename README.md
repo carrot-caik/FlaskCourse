@@ -1,6 +1,6 @@
 # Flask Course
 - Based off of following [this video](https://www.youtube.com/watch?v=Qr4QMBUPxWo) uploaded by freeCodeCamp.org.
-- Current position in the video: 2:25:37 (Chapter: 8).
+- Current position in the video: 2:52:00 (Chapter: 9).
 
 ## Virtual Environment Setup
 ```bash
@@ -8,8 +8,7 @@ $ python3 -m venv .
 # Get terminal into virtual environment
 $ source ./bin/activate
 # Install virtual environment packages
-$ pip install flask
-$ pip install flask-sqlalchemy
+$ pip install flask flask-sqlalchemy flask-wtf wtforms
 ```
 
 ## Useful software
